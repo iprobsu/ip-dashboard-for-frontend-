@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-glow-bounce {
+    animation: glow-bounce 2s ease-in-out infinite;
+  }
+
+  @keyframes glow-bounce {
+    0% {
+      transform: translateY(0);
+      filter: drop-shadow(0 0 6px #3b82f6);
+    }
+    50% {
+      transform: translateY(-6px);
+      filter: drop-shadow(0 0 20px #3b82f6);
+    }
+    100% {
+      transform: translateY(0);
+      filter: drop-shadow(0 0 6px #3b82f6);
+    }
+  }
+}
